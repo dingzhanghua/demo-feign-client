@@ -33,8 +33,8 @@ public class RequestResolver {
             for (Map.Entry<String, String[]> param : parameterMap.entrySet()) {
                 builder.append("[").append(param.getKey()).append( ": ").append(Arrays.toString(param.getValue())).append("]; ");
             }
+            builder.append(SEPARATOR);
         }
-        builder.append(SEPARATOR);
 
         builder.append(" Encoding: ").append(request.getCharacterEncoding()).append("; ")
                 .append(" ContentType: ").append(request.getContentType()).append(SEPARATOR);
